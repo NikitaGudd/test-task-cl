@@ -1,12 +1,22 @@
-import { InputHTMLAttributes, forwardRef } from "react";
+import { InputHTMLAttributes, forwardRef } from 'react';
+import styles from './Input.module.scss';
+import cn from 'classnames';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  variant?: 'default' | 'error' | 'success';
+}
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    return <input type={type} ref={ref} {...props} />;
-  },
+  ({ className, type, variant = 'default', ...props }, ref) => {
+    const inputClasses = cn(className, styles.input, styles[variant]);
+
+    return (
+      <input className={inputClasses} type={type} ref={ref} {...props}>
+        {type === 'password' && </>}
+      </input>
+    );
+  }
 );
-Input.displayName = "Input";
+Input.displayName = 'Input';
 
 export { Input };

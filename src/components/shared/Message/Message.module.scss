@@ -1,0 +1,20 @@
+@import "src/styles/font";
+@import "src/styles/colors";
+
+.message {
+    font-size: $font-sm;
+    font-weight: $font-normal;
+    line-height: 18px;
+}
+
+.default {
+    color: $default-color;
+}
+
+.error {
+    color: $error-color;
+}
+
+.success {
+    color: $success-color;
+}

@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button, Input } from '@/components/shared';
+import { Message } from '@/components/shared/Message';
 
 interface IFormInputs {
   email: string;
@@ -47,14 +48,18 @@ export default function AuthForm() {
         <label htmlFor="email">Email</label>
         <Input id="email" {...register('email')} />
         {errors.email && (
-          <span className={styles.error}>{errors.email.message}</span>
+          <Message variant="error" size="sm">
+            {errors.email.message}
+          </Message>
         )}
       </div>
       <div className={styles.inputGroup}>
         <label htmlFor="password">Password</label>
         <Input type="password" id="password" {...register('password')} />
         {errors.password && (
-          <span className={styles.error}>{errors.password.message}</span>
+          <Message variant="error" size="sm">
+            {errors.password?.message}
+          </Message>
         )}
       </div>
       <Button type="submit">Login</Button>
