@@ -1,5 +1,65 @@
+@import "src/styles/font";
+@import "src/styles/colors";
+
 .form {
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100dvh;
     flex-direction: column;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnPass {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submitBtn {
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-weight: $font-bold;
+    font-size: $font-md;
+    width: 240px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(110.46deg, #70c3ff 12.27%, #4b65ff 93.92%);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.title {
+    margin-bottom: 40px;
+    color: $default-color;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+    max-width: 315px;
+}
+
+.inputPass {
+    margin-bottom: 20px;
+    padding-right: 50px;
+    width: 245px;
+}
+
+.validationMessages {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }

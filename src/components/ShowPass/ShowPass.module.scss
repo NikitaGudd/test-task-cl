@@ -1,0 +1,13 @@
+@import "src/styles/colors";
+
+.default {
+    color: $border-focus-color;
+}
+
+.error {
+    color: $error-color;
+}
+
+.success {
+    color: $success-color;
+}

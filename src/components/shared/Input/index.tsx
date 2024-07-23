@@ -10,11 +10,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, variant = 'default', ...props }, ref) => {
     const inputClasses = cn(className, styles.input, styles[variant]);
 
-    return (
-      <input className={inputClasses} type={type} ref={ref} {...props}>
-        {type === 'password' && </>}
-      </input>
-    );
+    return <input className={inputClasses} type={type} ref={ref} {...props} />;
   }
 );
 Input.displayName = 'Input';

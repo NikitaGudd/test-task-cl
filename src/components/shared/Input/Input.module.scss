@@ -1,0 +1,46 @@
+@import "src/styles/colors";
+@import "src/styles/font";
+
+.input {
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    font-size: $font-md;
+    width: 273px;
+    max-width: 315px;
+    border-radius: 10px;
+
+    &:focus {
+        outline: 1px solid $border-focus-color;
+
+        &::placeholder {
+            color: $default-color;
+        }
+    }
+
+    &::placeholder {
+        color: $border-focus-color;
+    }
+}
+
+.default {
+    color: $default-color;
+}
+
+.success {
+    outline: 1px solid $success-color;
+    color: $success-color;
+
+    &:focus {
+        outline: 1px solid $success-color;
+    }
+}
+
+.error {
+    outline: 1px solid $error-color;
+    color: $error-color;
+
+    &:focus {
+        outline: 1px solid $error-color;
+    }
+}
