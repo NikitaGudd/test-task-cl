@@ -7,7 +7,7 @@ interface IShowPassProps {
   hidePass: boolean;
   onClick: () => void;
   className?: string;
-  variant?: string;
+  variant?: 'default' | 'error' | 'success';
   size?: number;
 }
 

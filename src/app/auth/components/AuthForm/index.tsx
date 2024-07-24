@@ -9,13 +9,9 @@ import { ShowPass } from '@/components/ShowPass';
 import { passwordValidationMessages } from '@/constants';
 import { validationSchema } from '@/utils';
 import { toast } from 'sonner';
+import { IFormInputs } from '@/types';
 
-interface IFormInputs {
-  email: string;
-  password: string;
-}
-
-const AuthForm = React.memo(() => {
+const AuthForm = () => {
   const {
     handleSubmit,
     control,
@@ -136,6 +132,6 @@ const AuthForm = React.memo(() => {
       </Button>
     </form>
   );
-});
+};
 
 export default AuthForm;
